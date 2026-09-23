@@ -46,6 +46,7 @@
                 <a href="#what-is-ai" class="sidebar-link block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-md">🤖 What is GenAI?</a>
                 <a href="#getting-started" class="sidebar-link block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-md">🚀 Getting Started</a>
                 <a href="#core-principles" class="sidebar-link block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-md">🧠 Core Principles</a>
+                <a href="#master-prompt" class="sidebar-link block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-md">🔑 Master Prompt</a>
                 <a href="#ai-for-students" class="sidebar-link block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-md">🧑‍🏫 Using AI with Students</a>
                 <a href="#inclusion" class="sidebar-link block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-md">🌍 Inclusion & Varieties</a>
                 <a href="#library" class="sidebar-link block px-4 py-2 text-sm text-slate-600 hover:bg-slate-100 rounded-md">📚 Curated Library</a>
@@ -132,6 +133,17 @@
                             <div class="bg-red-50 p-4 rounded-lg border border-red-200">
                                 <h4 class="font-bold text-red-800 mb-2">❌ It is NOT a Search Engine</h4>
                                 <p class="text-sm text-red-700">AI does not "know" facts or "understand" concepts like a human. Because it only predicts the next word, it can be confidently wrong and even make up information (this is called a "hallucination"). Always fact-check its output.</p>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 border-t border-slate-200 pt-6 space-y-6">
+                            <div>
+                                <h3 class="text-lg font-bold text-slate-800 mb-2">How AI Reads: RAG & Chunking</h3>
+                                <p class="text-sm text-slate-600">When you upload a large PDF, the AI doesn't read it cover-to-cover like a human. It uses a process called <strong>RAG (Retrieval-Augmented Generation)</strong>. It breaks the document into "chunks" and searches for the pieces most relevant to your prompt. Because of this, it might omit information or provide out-of-context answers. Always double-check its summaries against the original document.</p>
+                            </div>
+                            <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4 rounded-r-md">
+                                <h3 class="text-lg font-bold text-indigo-900 mb-1">Teaching ABOUT AI vs. Teaching WITH AI</h3>
+                                <p class="text-sm text-indigo-800">A core MEC and UNESCO guideline is this crucial dual approach. While we use AI as a tool for learning (Teaching <em>WITH</em> AI), we must simultaneously teach students how AI works—its data, algorithms, and ethical implications (Teaching <em>ABOUT</em> AI). Students need to understand the tool they are using to remain critical thinkers. Furthermore, the <strong>Human-in-the-loop</strong> principle dictates that AI is an assistant, not a replacement. The educator must always remain the central decision-maker and mediator.</p>
                             </div>
                         </div>
                     </div>
@@ -225,6 +237,102 @@
                                 </li>
                             </ul>
                         </div>
+
+                        <!-- Use the AI to Generate the Prompt Sub-section -->
+                        <div class="mt-4 bg-sky-50 p-6 rounded-lg border border-sky-200">
+                            <h3 class="font-bold text-lg text-sky-900 mb-3 flex items-center">
+                                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                                Or... Ask the AI to Build the Prompt for You
+                            </h3>
+                            <p class="text-sm text-slate-700 mb-4">Instead of using external generators, you can use the LLM itself to craft your prompt. Provide the AI with your raw ideas using the <strong>PARTS</strong> acronym, and ask it to build the optimized prompt.</p>
+                            
+                            <div class="bg-white p-4 rounded-md border border-sky-100">
+                                <p class="text-xs font-semibold text-sky-800 mb-2">TRY THIS META-PROMPT:</p>
+                                <code class="block text-sm text-slate-700 italic">"I need to create a prompt for a task. Here is the raw information based on the PARTS framework: [Insert your Persona, Aim, Recipients, Theme, Structure]. Please generate a highly optimized prompt that I can use to achieve this aim. I will analyze your suggested prompt and we can refine it together."</code>
+                            </div>
+                            
+                            <p class="text-sm font-medium text-sky-900 mt-4"><strong>Important:</strong> Always analyze the result the AI gives you, rewrite or tweak it if necessary, and then copy it to use in a fresh chat.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- NEW SECTION: Master Prompt & Context Window -->
+                <section id="master-prompt" class="mb-12 scroll-mt-24">
+                    <h2 class="text-3xl font-bold mb-2 text-slate-900">The Master Prompt & Context Window</h2>
+                    <p class="text-slate-600 mb-6 italic">Unlock the true power of AI by setting a strong foundation and understanding its memory limits.</p>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200 space-y-6">
+                        <!-- Master Prompt -->
+                        <div>
+                            <h3 class="font-bold text-xl text-sky-800 mb-2">1. The Master Prompt</h3>
+                            <p class="text-sm text-slate-600 mb-3">A Master Prompt is a foundational document that contains your educator profile, teaching context, student demographics, and pedagogical goals. Instead of pasting this at the beginning of every chat, you can add this to your AI's settings. By establishing this context upfront, you ensure highly tailored, relevant responses.</p>
+                            
+                            <!-- Updated Settings Instructions -->
+                            <div class="bg-blue-50 border-l-4 border-blue-500 p-4 mb-4 rounded-r-md">
+                                <h4 class="font-bold text-blue-900 mb-1">How to Save Your Master Prompt</h4>
+                                <p class="text-sm text-blue-800 mb-2">Most major AI models allow you to save these instructions so they apply to all future chats:</p>
+                                <ul class="list-disc list-inside text-sm text-blue-800 space-y-1">
+                                    <li><strong>Google Gemini:</strong> Go to Settings > Personal Intelligence > Instructions for Gemini > Add.</li>
+                                    <li><strong>ChatGPT:</strong> Go to Settings > Custom Instructions.</li>
+                                    <li><strong>Claude:</strong> Use "Projects" or set custom instructions depending on your subscription tier.</li>
+                                </ul>
+                            </div>
+
+                            <div class="bg-slate-50 p-4 rounded-md border border-slate-200 font-mono text-sm text-slate-700">
+                                <strong>Template:</strong> "I am an English teacher at a [public/private] school in [City]. I teach [age group] at the [CEFR Level]. My pedagogical approach is based on [TBLT/Communicative Approach]. Please tailor all activities to be highly interactive, culturally relevant to Brazil, and require minimal printing."
+                            </div>
+                            
+                            <!-- How to build it from scratch -->
+                            <div class="mt-6 bg-white border border-slate-200 p-5 rounded-md shadow-sm">
+                                <h4 class="font-bold text-lg text-slate-800 mb-3">How to Build Your Master Prompt from Scratch</h4>
+                                <p class="text-sm text-slate-600 mb-4">Don't want to use a template? Ask the AI to interview you to create your perfect Master Prompt. Open a new chat and follow these two steps:</p>
+                                
+                                <div class="space-y-4">
+                                    <div>
+                                        <h5 class="font-semibold text-sky-700 text-sm mb-1">Step 1: The Interview Prompt</h5>
+                                        <p class="text-xs text-slate-500 mb-1">Copy and paste this into the AI:</p>
+                                        <code class="block bg-slate-50 p-3 rounded text-sm text-slate-700 border border-slate-100">"I want to create a professional profile to use in generative AI tools. Ask me questions about who I am, my professional role, my work context, my areas of interest, my current projects, my professional goals, my communication style, and how I like to receive guidance."</code>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-semibold text-sky-700 text-sm mb-1">Step 2: The Synthesis Prompt</h5>
+                                        <p class="text-xs text-slate-500 mb-1">After you answer the AI's questions, reply with this:</p>
+                                        <code class="block bg-slate-50 p-3 rounded text-sm text-slate-700 border border-slate-100">"[Paste your answers here]. Based on my answers, synthesize everything into a document called 'MASTER PROMPT FOR AI', ready to be used on different AI platforms so I receive better responses. Summarize everything in up to 1200 characters."</code>
+                                    </div>
+                                </div>
+
+                                <!-- Privacy Warning -->
+                                <div class="mt-6 bg-red-50 border-l-4 border-red-500 p-4 rounded-r-md">
+                                    <h5 class="font-bold text-red-900 text-sm mb-2 flex items-center">
+                                        <svg class="w-5 h-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                        What NOT to Include in Your Master Prompt
+                                    </h5>
+                                    <ul class="list-disc list-inside text-sm text-red-800 space-y-1">
+                                        <li>Passwords</li>
+                                        <li>Full address</li>
+                                        <li>Document numbers (ID, CPF, SSN, etc.)</li>
+                                        <li>Bank details</li>
+                                        <li>Intimate or deeply personal information</li>
+                                        <li>Information about other people (students, colleagues) without authorization</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Context Window -->
+                        <div class="border-t border-slate-200 pt-6">
+                            <h3 class="font-bold text-xl text-sky-800 mb-2">2. Context Window vs. Memory</h3>
+                            <p class="text-sm text-slate-600 mb-3">AI doesn't "remember" past conversations like a human. It has a <strong>Context Window</strong>—a limited amount of text (tokens) it can keep active in its "short-term memory" at one time. In a long conversation, as you add new prompts, the AI will eventually "forget" your Master Prompt and initial instructions, even if they are saved in your settings.</p>
+                        </div>
+
+                        <!-- Canary Analogy -->
+                        <div class="bg-amber-50 border border-amber-200 p-5 rounded-md shadow-sm">
+                            <h4 class="font-bold text-amber-900 mb-2 flex items-center text-lg">
+                                🐦 The "Canary" Analogy (Testing the Context Window)
+                            </h4>
+                            <p class="text-sm text-amber-800 mb-2">Miners used to take canaries into coal mines as an early warning system. You can use a clever trick to build a similar warning system for your AI!</p>
+                            <p class="text-sm text-amber-800 font-medium bg-white/60 p-2 rounded inline-block mb-2">Add this instruction to your Master Prompt in your AI settings: <br><em>"Always start every response to me with the word 'Canary'."</em></p>
+                            <p class="text-sm text-amber-800">If the AI gives you a response that <strong>does not</strong> start with "Canary", it means its context window is full. It has "forgotten" your initial instructions, and it is time to start a brand new chat!</p>
+                        </div>
                     </div>
                 </section>
 
@@ -266,6 +374,15 @@
                         </div>
                         <div class="border-t border-slate-200 pt-6">
                             <h3 class="font-bold text-lg text-slate-800 mb-2">Rule #2: The Digital Safety Briefing</h3>
+                            
+                            <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-5 rounded-r-md">
+                                <h4 class="font-bold text-red-900 mb-1 flex items-center">
+                                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                                    CRITICAL: Data Protection (LGPD & ECA Digital)
+                                </h4>
+                                <p class="text-sm text-red-800">Strict rules exist against sharing sensitive student data. <strong>Never input real student names, grades, behavioral reports, or psychological diagnoses into AI models.</strong> AI platforms may use your inputs for training, causing severe privacy violations. Always use fictionalized personas or fully anonymized data when prompting.</p>
+                            </div>
+
                             <ul class="space-y-3 text-sm text-slate-600 list-disc list-inside">
                                 <li><strong>It's a Tool, Not a Friend:</strong> Remind students they are interacting with a program, not a person. It doesn’t have feelings.</li>
                                 <li><strong>Protect Your Privacy:</strong> Treat chatbots like a public postcard. Never share personal details (full name, school, address, photos).</li>
@@ -307,7 +424,7 @@
                             <p class="text-sm text-slate-600 mb-4">Most AI models standardize English to American or British variants. As teachers, we must break this pattern and expose students to English as a Lingua Franca (ELF).</p>
                             
                             <ul class="list-disc list-inside space-y-2 text-sm text-slate-700">
-                                <li><strong>Linguistic Representation:</strong> Models are trained primarily on English and a few high-resource languages, while regional variants, indigenous languages, and creoles are largely absent. Uncritical adoption of AI reinforces this linguistic hierarchy, so it's vital to discuss these biases with students.</li>
+                                <li><strong>Linguistic Representation & Algorithmic Bias:</strong> AI models are trained predominantly on data from the Global North. Regional variants, indigenous languages, and creoles are largely absent. Uncritical adoption of AI can lead to linguistic imperialism and cultural erasure, reinforcing societal biases. Discussing these biases with students is a vital part of AI literacy.</li>
                                 <li><strong>Critical Comparison:</strong> Ask AI to rewrite a formal text in teenage slang or regional dialect and ask students to analyze the register shifts.</li>
                                 <li><strong>Simulating Varieties:</strong> Ask AI to generate dialogues in "Singlish," "Indian English," or other variants to train sociolinguistic awareness. However, bear in mind that since most LLMs (like GPT or Gemini) are primarily trained on standardized English, the generated texts in these varieties must be reviewed thoroughly. This presents an excellent opportunity for students to exercise critical thinking.</li>
                             </ul>
@@ -342,6 +459,17 @@
                                 </a>
                             </div>
                         </div>
+
+                        <!-- Subsection E: Unplugged AI -->
+                        <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200 border-l-4 border-l-green-500 mt-6">
+                            <h3 class="text-xl font-bold text-slate-800 mb-3">E. Unplugged AI & Digital Equity</h3>
+                            <p class="text-sm text-slate-600 mb-4">Teaching AI concepts does not always require high-speed internet or state-of-the-art devices. To ensure digital equity in low-tech environments, we can and should use "Unplugged AI."</p>
+                            
+                            <ul class="list-disc list-inside space-y-3 text-sm text-slate-700">
+                                <li><strong>What is it?</strong> It involves teaching the foundational logic behind AI (algorithms, pattern recognition, decision trees, and computational thinking) using physical, non-digital activities (e.g., pen and paper exercises, board games, or physical sorting tasks).</li>
+                                <li><strong>Why it matters:</strong> It democratizes AI literacy. Students in under-resourced schools can still develop critical computational thinking and understand how algorithms shape their world, preventing the digital divide from widening while ensuring no student is left behind.</li>
+                            </ul>
+                        </div>
                     </div>
                 </section>
                 
@@ -349,6 +477,34 @@
                 <section id="library" class="mt-12 scroll-mt-24">
                     <h2 class="text-3xl font-bold mb-2 text-slate-900">Curated Resources: The Pedagogical Foundation</h2>
                     <p class="text-slate-600 mb-6 italic">Artificial Intelligence in ELT should not replace pedagogy, but serve it. Below, I have selected essential works, authors, and channels that connect technology to SLA (Second Language Acquisition) and TBLT principles.</p>
+
+                    <!-- Official Guidelines Section -->
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Official Brazilian Guidelines (MEC)</h3>
+                        <div class="bg-white p-6 rounded-lg shadow-md border border-slate-200 border-l-4 border-l-emerald-500">
+                            <p class="text-sm text-slate-600 mb-4">Essential reading for educators and administrators aligning their practices with national standards for responsible AI use in Brazil.</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    <div>
+                                        <a href="https://www.gov.br/mec/pt-br/referencial-de-ia-na-educacao" target="_blank" rel="noopener noreferrer" class="font-bold text-slate-800 hover:text-emerald-700 hover:underline">
+                                            Referencial de Inteligência Artificial na Educação
+                                        </a>
+                                        <p class="text-sm text-slate-600 mt-1"><em>(Framework for the Development and Responsible Use of Artificial Intelligence in Education)</em>. The official MEC framework detailing pathways for ethical AI integration across all educational levels.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-5 h-5 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                    <div>
+                                        <a href="https://www.gov.br/mec/pt-br/escolas-conectadas/arquivos/ia-basica.pdf#:~:text=Partindo%20de%20defini%C3%A7%C3%B5es%20do%20Referencial,sobre%20IA%20e%20o%20ensino" target="_blank" rel="noopener noreferrer" class="font-bold text-slate-800 hover:text-emerald-700 hover:underline">
+                                            Inteligência Artificial na Educação Básica
+                                        </a>
+                                        <p class="text-sm text-slate-600 mt-1">A guiding document specifically for K-12 (Educação Básica) focusing on curriculum pathways, critical media literacy, and ethical practices in schools. It emphasizes the dual approach of teaching <em>about</em> AI and teaching <em>with</em> AI.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
 
                     <!-- Books Section -->
                     <div class="mb-8">
@@ -855,8 +1011,39 @@
                                     <div class="bg-white p-4 rounded-lg border border-slate-200"><h4 class="font-bold text-md text-rose-800 mb-2">48. Back-Translation QA</h4><p class="text-xs font-semibold text-slate-500 mb-1">EXAMPLE</p><code class="block text-xs bg-slate-100 p-2 rounded mb-2">“Write A2 task instructions; translate to Spanish; back-translate to English; revise until meaning drift <10%.”</code><p class="text-xs font-semibold text-slate-500 mb-1">USE CASE</p><p class="text-xs text-slate-600">Ensuring clear, multilingual-friendly instructions and catching ambiguity.</p></div>
                                 </div>
                             </div>
+                        </section>
+
+                        <!-- NEW Category 7: Evaluation & Multimedia (from PDFs) -->
+                        <section id="category-7" class="scroll-mt-24 mt-4">
+                            <button class="accordion-header flex justify-between items-center w-full p-5 bg-white rounded-lg shadow-md border border-slate-200 text-left hover:bg-slate-50 transition">
+                                <div class="flex-1">
+                                    <h2 class="text-xl font-bold text-slate-900">7. Evaluation & Multimedia (New)</h2>
+                                    <p class="text-sm text-slate-500 mt-1">Prompts for generating rubrics, exit tickets, and using AI media tools.</p>
+                                </div>
+                                <svg class="accordion-icon w-6 h-6 transform transition-transform duration-300 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                            </button>
+                            <div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                
+                                <div class="p-4">
+                                    <div class="bg-fuchsia-50 p-4 rounded-md mb-2 border border-fuchsia-200">
+                                        <p class="text-sm text-fuchsia-900 font-medium flex items-center">
+                                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            Crucial Distinction: AI Corrects, It Doesn't Evaluate
+                                        </p>
+                                        <p class="text-sm text-fuchsia-800 mt-2">AI is excellent for generating rubrics, designing exit tickets, and correcting objective quizzes. However, <em>evaluation</em> is a deeply human process that requires empathy, understanding of a student's unique context, and pedagogical judgment. AI cannot replace the educator's role as the central evaluator and mediator.</p>
+                                    </div>
+                                </div>
+
+                                <div class="pb-4 px-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                    <div class="bg-white p-4 rounded-lg border border-slate-200"><h4 class="font-bold text-md text-fuchsia-800 mb-2">49. Rubric Generation</h4><p class="text-xs font-semibold text-slate-500 mb-1">EXAMPLE</p><code class="block text-xs bg-slate-100 p-2 rounded mb-2">“Act as an assessment expert. Create an analytical rubric for a B1 argumentative essay. Include 4 criteria (Task Achievement, Coherence, Lexical Resource, Grammar) across 4 performance bands.”</code><p class="text-xs font-semibold text-slate-500 mb-1">USE CASE</p><p class="text-xs text-slate-600">Standardizing evaluation criteria quickly and effectively.</p></div>
+                                    <div class="bg-white p-4 rounded-lg border border-slate-200"><h4 class="font-bold text-md text-fuchsia-800 mb-2">50. Formative Exit Tickets</h4><p class="text-xs font-semibold text-slate-500 mb-1">EXAMPLE</p><code class="block text-xs bg-slate-100 p-2 rounded mb-2">“Generate 3 creative 'Exit Ticket' questions to assess if my A2 students grasped the concept of countable vs. uncountable food nouns today.”</code><p class="text-xs font-semibold text-slate-500 mb-1">USE CASE</p><p class="text-xs text-slate-600">Quick, end-of-lesson formative assessment to gauge understanding.</p></div>
+                                    <div class="bg-white p-4 rounded-lg border border-slate-200"><h4 class="font-bold text-md text-fuchsia-800 mb-2">51. Image Generation (Canva AI / Midjourney)</h4><p class="text-xs font-semibold text-slate-500 mb-1">EXAMPLE</p><code class="block text-xs bg-slate-100 p-2 rounded mb-2">“A photorealistic image of a busy Brazilian open-air market (feira livre) with people buying fruits and vegetables, bright daylight, vibrant colors.”</code><p class="text-xs font-semibold text-slate-500 mb-1">USE CASE</p><p class="text-xs text-slate-600">Creating custom, culturally relevant visual flashcards for vocabulary.</p></div>
+                                    <div class="bg-white p-4 rounded-lg border border-slate-200"><h4 class="font-bold text-md text-fuchsia-800 mb-2">52. Music Generation (Suno / Mureka)</h4><p class="text-xs font-semibold text-slate-500 mb-1">EXAMPLE</p><code class="block text-xs bg-slate-100 p-2 rounded mb-2">“[Verse 1] I have been, you have gone, / We have traveled all night long. / [Style] Upbeat pop rock, clear vocals, educational.”</code><p class="text-xs font-semibold text-slate-500 mb-1">USE CASE</p><p class="text-xs text-slate-600">Creating custom, catchy grammar chants or vocabulary songs.</p></div>
+                                </div>
+                            </div>
+                        </section>
                             
-                            <!-- New Highlighted Section for Advanced ELT Techniques -->
+                        <!-- New Highlighted Section for Advanced ELT Techniques -->
                             <div class="mt-6 bg-indigo-50 border border-indigo-200 rounded-lg p-6">
                                 <h3 class="text-lg font-bold text-indigo-900 mb-4 flex items-center">
                                     Advanced Techniques for ELT
